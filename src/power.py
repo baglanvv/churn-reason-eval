@@ -49,9 +49,12 @@ if __name__ == "__main__":
     print()
     p1 = 46 / 48
     mdd = min_detectable_diff(p1, 48)
-    print(f"At {p1:.3f} on n=48, the smallest improvement this set can")
-    print(f"distinguish from noise is ~{mdd:.3f}" if mdd else
-          "no improvement is detectable - the baseline is too close to ceiling")
+    if mdd:
+        print(f"At {p1:.3f} on n=48, the smallest improvement this set can")
+        print(f"distinguish from noise is ~{mdd:.3f}")
+    else:
+        print(f"At {p1:.3f} on n=48, no improvement is detectable.")
+        print("The baseline is too close to ceiling.")
     print()
     for target in (0.90, 0.95):
         lo, hi = wilson(round(target * 48), 48)

@@ -1,13 +1,13 @@
 # Churn-reason classification: an eval that failed its own power check
 
-An evaluation harness for an LLM feature in EdTech retention — and a worked
-example of why the first number an eval produces is usually not the finding.
+An evaluation harness for an LLM feature in EdTech retention, and a worked
+example of why the first number an eval gives you usually isn't the finding.
 
-**Headline: I built this to decide whether an LLM should classify cancellation
-reasons. It cannot answer that question, and the reason it cannot is the
-interesting part.** A $0 keyword baseline scores 95.8% on the held-out half,
-which saturates the test set and leaves no detectable room for a model to win.
-That is a verdict on my test set, not a verdict on LLMs.
+**The headline:** I built this to decide whether an LLM should classify
+cancellation reasons. It can't answer that question, and why it can't is the
+interesting part. A keyword baseline costing nothing scores 95.8% on the
+held-out half, which saturates the test set and leaves no detectable room for a
+model to beat it. That's a verdict on my test set, not on LLMs.
 
 ---
 
@@ -22,7 +22,7 @@ save-flow could route automatically:
 | `price` | discount or cheaper tier | high |
 | `content_gap` | curriculum review + alternative track | medium |
 | `time` | **offer a pause instead of cancellation** | high |
-| `goal_met` | ask for testimonial — **never discount** | none |
+| `goal_met` | ask for a testimonial, **never discount** | none |
 | `technical` | engineering escalation + service credit | medium |
 | `support` | senior agent follow-up | medium |
 | `competitor` | competitive intel | low |
@@ -30,18 +30,18 @@ save-flow could route automatically:
 
 Full definitions and costs: [`data/taxonomy.json`](data/taxonomy.json).
 
-A label that does not change what the business does is not worth predicting, so
+A label that doesn't change what the business does isn't worth predicting, so
 every class maps to exactly one action.
 
 ## Why the headline metric is dollars, not accuracy
 
 Accuracy treats every mistake as equally bad. These are not:
 
-- Calling a **`goal_met`** learner **`price`** hands a discount to someone who
-  already finished and was leaving happy. Pure margin loss, zero save.
-- Calling a **`time`** learner **`unclear`** forfeits the cheapest save in the
-  taxonomy — a pause costs ~$2 and is the likeliest of a weak set of offers
-  to be accepted, because it asks for no new money.
+- Calling a `goal_met` learner `price` hands a discount to someone who already
+  finished and was leaving happy. Straight margin loss, nobody saved.
+- Calling a `time` learner `unclear` throws away the cheapest save available. A
+  pause costs about $2 and is the likeliest of a weak set of offers to get
+  accepted, because it doesn't ask for any new money.
 
 So the harness reports **regret in dollars**: the gap between the best
 achievable outcome for a case and what the prediction actually produced.
@@ -52,18 +52,17 @@ wrong   -> net = -action_cost[pred]      (wrong remedy, save collapses, still bi
 regret  -> best_possible_net[true] - actual_net
 ```
 
-A model can gain accuracy while losing money. Regret catches that; accuracy
-does not. Assumptions live in [`src/score.py`](src/score.py) under
-`ECONOMICS` — `LTV = $480`, per-class save rates — and are **planning
-assumptions, not measurements.** Every dollar figure below inherits that
-caveat.
+A model can gain accuracy while losing money. Regret catches that, accuracy
+doesn't. The assumptions live in [src/score.py](src/score.py) under
+`ECONOMICS` (`LTV = $480`, plus per-class save rates). They're planning
+assumptions, not measurements, and every dollar figure below inherits that.
 
-An earlier version of this file used save rates of 0.35–0.55. Propagated
+An earlier version of this file used save rates between 0.35 and 0.55. Run
 through the business model in the companion PRD, those implied a 12.7% overall
-save rate and a $60k/month net — a fantasy, since published save-flow
-conversion is single-digit to low-double-digit. The current rates are
-deliberately pessimistic. The lesson generalises: **an eval's cost model is a
-load-bearing assumption and deserves the same scrutiny as its labels.**
+save rate and a $60k/month net, which is fiction. Published save-flow
+conversion runs from single digits to the low teens. The current rates are
+deliberately pessimistic. The general lesson: an eval's cost model holds up
+everything built on it, and it deserves the same scrutiny as the labels.
 
 ## Test set
 
@@ -72,35 +71,35 @@ load-bearing assumption and deserves the same scrutiny as its labels.**
 | | |
 |---|---|
 | Classes | 8, exactly 12 rows each |
-| Split | 48 dev / 48 test, stratified — 6 per class, 16 hard, 9 RU on each side |
-| Difficulty | 64 `easy`, 32 `hard` (hard = resolvable only by reading past keywords) |
-| Language | 78 EN, 18 RU — the CIS market this is modeled on is bilingual |
+| Split | 48 dev / 48 test, stratified: 6 per class, 16 hard, 9 RU on each side |
+| Difficulty | 64 `easy`, 32 `hard`, where hard means you can only resolve it by reading past the keywords |
+| Language | 78 EN, 18 RU, because the CIS market this is modeled on is bilingual |
 
-**The data is synthetic. I wrote all 96 rows by hand.** It is not customer
-data, and that is this project's central weakness, discussed below.
+**The data is synthetic. I wrote all 96 rows by hand.** It isn't customer data,
+and that's this project's main weakness. More on it below.
 
 `hard` rows are where the design work went. Examples:
 
 - *"Found the same SQL material on another platform for a third of the price."*
-  → `price`, not `competitor`. The decisive factor is cost.
+  is `price`, not `competitor`. The deciding factor is cost.
 - *"I finished the only track relevant to me in three weeks and now there is
-  nothing left to watch."* → `content_gap`, not `goal_met`. Sounds satisfied;
-  the driver is a thin library.
-- *"It was not for me."* → `unclear`. Abstaining is the correct answer, and a
-  classifier that guesses here sends a real intervention to the wrong person.
+  nothing left to watch."* is `content_gap`, not `goal_met`. It sounds
+  satisfied, but the driver is a thin library.
+- *"It was not for me."* is `unclear`. Abstaining is correct here, and a
+  classifier that guesses sends a real intervention to the wrong person.
 
 ## Results
 
 Held-out test half, n=48. **Only the baseline row is measured.** I have no API
-key configured, so the model rows are commands to run, not results — I am not
-reporting numbers I did not produce.
+key configured, so the model rows below are commands to run rather than
+results. I'm not going to report numbers I didn't produce.
 
 | Run | Accuracy | 95% CI | Macro F1 | Hard | RU | Regret/case | Value captured |
 |---|---|---|---|---|---|---|---|
 | keyword baseline | **0.958** | [0.860, 0.988] | 0.959 | 0.875 | 1.000 | $0.51 | 96.7% |
-| `v1` minimal prompt | — | — | — | — | — | — | — |
-| `v2` + definitions | — | — | — | — | — | — | — |
-| `v3` + actions + 5 dev few-shots | — | — | — | — | — | — | — |
+| `v1` minimal prompt | not run | | | | | | |
+| `v2` + definitions | not run | | | | | | |
+| `v3` + actions + 5 dev few-shots | not run | | | | | | |
 
 Baseline per-class (test): perfect precision on 7 of 8 classes; `unclear`
 precision 0.75 because it absorbs what the rules cannot match. Both test
@@ -112,8 +111,8 @@ g10: goal_met -> unclear   "would keep paying but there is nothing more I need"
 ```
 
 That `price -> unclear` single error carries **$17.60 of the $24.60 total
-regret** — 72% of the cost sits in one row, which is what a per-case average hides.
-Reproduce: `results/baseline-keywords.json`.
+regret**. 72% of the cost sits in a single row, which is exactly what a
+per-case average hides. Full output in `results/baseline-keywords.json`.
 
 ## What went wrong with the method
 
@@ -136,8 +135,8 @@ ties the baseline is in reality better.
 ```
 baseline, held-out test: 46/48 = 0.958  95% CI [0.860, 0.988]  width 0.128
 
-At 0.958 on n=48, no improvement is detectable — the baseline is
-too close to ceiling.
+At 0.958 on n=48, no improvement is detectable.
+The baseline is too close to ceiling.
 
 a model scoring 0.90 on n=48 -> CI [0.778, 0.955]  overlaps baseline CI: True
 a model scoring 0.95 on n=48 -> CI [0.860, 0.988]  overlaps baseline CI: True
@@ -148,19 +147,19 @@ baseline. Running the model rows would produce a table that *looks* like
 evidence and is not. **This set sizes a go/no-go on gross failure. It cannot
 rank prompts.**
 
-A guard against the leak I actually made is in the repo —
-[`src/check_contamination.py`](src/check_contamination.py). The first draft of
-`prompts/v3.txt` had 3 of 4 few-shot examples drawn from the test half. The
-guard caught it, the examples were replaced with dev-only rows, and it now runs
-clean and fails on both leak shapes.
+There's a guard in the repo against the leak I actually made:
+[src/check_contamination.py](src/check_contamination.py). The first draft of
+`prompts/v3.txt` had 3 of its 4 few-shot examples pulled from the test half.
+The guard caught it, I replaced them with dev-only rows, and it now runs clean
+and fails on both shapes of leak.
 
 ## What I would do before trusting any number here
 
 1. **Replace the synthetic data with real cancellation comments.** A baseline
    saturating at 95.8% is evidence my invented text is too clean and too
-   on-distribution for rules I wrote myself — real comments are messier,
-   multi-reason, typo-ridden, and code-switched mid-sentence. This is the only
-   fix that matters; everything else is secondary.
+   on-distribution for rules I wrote myself. Real comments are messier:
+   multi-reason, full of typos, switching language mid-sentence. This is the
+   only fix that really matters. Everything else is secondary.
 2. **Size the set from the decision.** `src/power.py` prints the arithmetic:
    resolving a 3-point gain near 95% needs ~585 rows per arm, a 2-point gain
    ~1,500, a 1-point gain ~6,700. Label to the decision, not to a round number.
@@ -178,7 +177,7 @@ real data instead of guessing at it.
 
 ## Running it
 
-No dependencies for the baseline — stdlib Python 3.9+.
+The baseline has no dependencies. Stdlib Python 3.9 or later.
 
 ```bash
 python3 src/run_eval.py --model baseline      # measured above
@@ -195,8 +194,8 @@ python3 src/run_eval.py --model claude-sonnet-5 --prompt prompts/v3.txt
 ```
 
 Off-taxonomy responses are counted and reported as `off_taxonomy_responses`
-rather than silently repaired — a model inventing a label is a real failure
-mode and belongs in the results.
+rather than quietly repaired. A model inventing a label is a real failure mode
+and it belongs in the results.
 
 ```
 data/    taxonomy.json (classes, actions, costs) · labeled_set.jsonl (96 rows)
