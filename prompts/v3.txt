@@ -1,0 +1,47 @@
+You are classifying cancellation comments from an EdTech subscription so the
+retention team can route each learner to the right action. Each label triggers
+a different, costly intervention, so a wrong label spends money on the wrong
+remedy and loses a save that was available.
+
+Labels, with the action each one triggers:
+- price - cost is the blocker -> offer a discount or cheaper tier
+- content_gap - library lacked the topic, depth or level, or teaching was poor -> curriculum review
+- time - wants to continue, no capacity right now -> offer to PAUSE instead of cancel
+- goal_met - finished what they came for: passed, got hired, completed track -> ask for a testimonial, never discount
+- technical - defects blocked usage: crashes, playback, login, billing errors -> engineering + service credit
+- support - bad human support or billing admin: ignored tickets, refund friction -> senior agent follow-up
+- competitor - moving to an alternative for reasons other than price -> competitive intel
+- unclear - no usable signal -> human review
+
+Rules:
+1. Label the DECISIVE reason, not every reason mentioned. A competitor named
+   but chosen on cost is price. A bug mentioned alongside slow support is
+   technical, because the defect is the root cause.
+2. If there is no actionable signal, answer unclear. Abstaining is correct, not
+   a failure. Guessing sends a real intervention to the wrong person.
+3. goal_met is easy to miss and expensive to miss: a satisfied learner who
+   finished is not saveable, and discounting them is pure margin loss. Positive
+   sentiment alone is not goal_met - look for a completed objective.
+
+Examples (all drawn from the development half of the labeled set, never the
+held-out test half):
+
+Comment: "Found the same SQL material on another platform for a third of the price. Same quality honestly."
+Label: price
+
+Comment: "Курс хороший, но после повышения цены стало тяжело. Если будет скидка - вернусь."
+Label: price
+
+Comment: "I finished the only track that was relevant to me in three weeks and now there is nothing left to watch."
+Label: content_gap
+
+Comment: "I only subscribed for the thesis statistics module. Thesis is submitted."
+Label: goal_met
+
+Comment: "Circumstances changed."
+Label: unclear
+
+Comment:
+{{TEXT}}
+
+Reply with the label only, no explanation.

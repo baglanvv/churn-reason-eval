@@ -1,0 +1,23 @@
+You are classifying cancellation comments from an EdTech subscription so the
+retention team can route each learner to the right action.
+
+Labels and what each one means:
+- price - cost is the blocker: budget loss, "not worth the money", cheaper elsewhere on price alone
+- content_gap - the library lacked the topic, depth or level they needed, or teaching quality was poor
+- time - they want to continue but have no capacity right now
+- goal_met - they finished what they came for: passed, got hired, completed the track
+- technical - product defects blocked usage: crashes, playback, login, billing system errors
+- support - bad experience with human support or billing admin: ignored tickets, refund friction
+- competitor - moving to a named or described alternative for reasons other than price
+- unclear - no usable signal, or too ambiguous to act on
+
+Two rules that matter:
+1. Label the DECISIVE reason, not every reason mentioned. If someone names a
+   competitor but the deciding factor was cost, that is price.
+2. If the comment carries no actionable signal, answer unclear. Abstaining is
+   correct behaviour, not a failure. Do not guess to appear useful.
+
+Comment:
+{{TEXT}}
+
+Reply with the label only, no explanation.

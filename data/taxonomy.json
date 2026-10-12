@@ -1,0 +1,61 @@
+{
+  "_note": "Churn-reason taxonomy. Each class maps to ONE retention action, because a label that does not change what the business does is not worth predicting.",
+  "classes": {
+    "price": {
+      "definition": "Cost is the stated blocker. Includes budget loss, 'not worth the money', cheaper-alternative-on-price.",
+      "action": "Offer discount or downgrade to cheaper tier",
+      "save_potential": "high",
+      "action_cost_usd": 48.0,
+      "action_cost_note": "3 months at 40% off on a $40/mo plan"
+    },
+    "content_gap": {
+      "definition": "Course library lacked the topic, depth, or level the learner needed. Includes quality complaints about teaching.",
+      "action": "Route to curriculum team + recommend alternative track",
+      "save_potential": "medium",
+      "action_cost_usd": 12.0,
+      "action_cost_note": "Human curation time"
+    },
+    "time": {
+      "definition": "Learner wants to continue but has no capacity right now. Life circumstances, workload.",
+      "action": "Offer subscription pause instead of cancellation",
+      "save_potential": "high",
+      "action_cost_usd": 2.0,
+      "action_cost_note": "Pause is nearly free and defers revenue rather than losing it"
+    },
+    "goal_met": {
+      "definition": "Learner finished what they came for. Passed the exam, got the job, completed the track. Leaving satisfied.",
+      "action": "Request testimonial / referral. Do NOT discount.",
+      "save_potential": "none",
+      "action_cost_usd": 1.0,
+      "action_cost_note": "Discounting this group is pure margin loss - they are done"
+    },
+    "technical": {
+      "definition": "Product defects blocked usage. Crashes, video playback, login, payment failures, mobile bugs.",
+      "action": "Escalate to engineering + service credit",
+      "save_potential": "medium",
+      "action_cost_usd": 40.0,
+      "action_cost_note": "One month credit"
+    },
+    "support": {
+      "definition": "Negative experience with human support or billing admin. Unanswered tickets, surprise charges, refund friction.",
+      "action": "Human follow-up from a senior agent",
+      "save_potential": "medium",
+      "action_cost_usd": 25.0,
+      "action_cost_note": "Senior agent time"
+    },
+    "competitor": {
+      "definition": "Explicitly moving to a named or described alternative provider for reasons other than price.",
+      "action": "Log competitive intel + targeted feature pitch",
+      "save_potential": "low",
+      "action_cost_usd": 12.0,
+      "action_cost_note": "Analyst time"
+    },
+    "unclear": {
+      "definition": "Text carries no usable signal, is empty-ish, or is too ambiguous to act on. Correctly abstaining is a WIN, not a failure.",
+      "action": "Queue for human review",
+      "save_potential": "unknown",
+      "action_cost_usd": 8.0,
+      "action_cost_note": "Human review time"
+    }
+  }
+}

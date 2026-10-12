@@ -1,0 +1,1035 @@
+{
+  "run": "baseline-keywords",
+  "metrics": {
+    "n": 48,
+    "accuracy": 0.958,
+    "macro_f1": 0.959,
+    "accuracy_easy": 1.0,
+    "accuracy_hard": 0.875,
+    "accuracy_en": 0.949,
+    "accuracy_ru": 1.0,
+    "regret_usd_total": 24.6,
+    "regret_usd_per_case": 0.51,
+    "value_captured_pct": 96.7,
+    "per_class": {
+      "price": {
+        "precision": 1.0,
+        "recall": 0.833,
+        "f1": 0.909,
+        "support": 6
+      },
+      "content_gap": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "time": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "goal_met": {
+        "precision": 1.0,
+        "recall": 0.833,
+        "f1": 0.909,
+        "support": 6
+      },
+      "technical": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "support": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "competitor": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "unclear": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.857,
+        "support": 6
+      }
+    },
+    "confusion": {
+      "competitor->competitor": 6,
+      "content_gap->content_gap": 6,
+      "goal_met->goal_met": 5,
+      "goal_met->unclear": 1,
+      "price->price": 5,
+      "price->unclear": 1,
+      "support->support": 6,
+      "technical->technical": 6,
+      "time->time": 6,
+      "unclear->unclear": 6
+    }
+  },
+  "metrics_dev": {
+    "n": 48,
+    "accuracy": 0.938,
+    "macro_f1": 0.939,
+    "accuracy_easy": 0.969,
+    "accuracy_hard": 0.875,
+    "accuracy_en": 0.923,
+    "accuracy_ru": 1.0,
+    "regret_usd_total": 123.6,
+    "regret_usd_per_case": 2.57,
+    "value_captured_pct": 83.6,
+    "per_class": {
+      "price": {
+        "precision": 1.0,
+        "recall": 0.833,
+        "f1": 0.909,
+        "support": 6
+      },
+      "content_gap": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "time": {
+        "precision": 1.0,
+        "recall": 0.833,
+        "f1": 0.909,
+        "support": 6
+      },
+      "goal_met": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "technical": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "support": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "competitor": {
+        "precision": 0.714,
+        "recall": 0.833,
+        "f1": 0.769,
+        "support": 6
+      },
+      "unclear": {
+        "precision": 0.857,
+        "recall": 1.0,
+        "f1": 0.923,
+        "support": 6
+      }
+    },
+    "confusion": {
+      "competitor->competitor": 5,
+      "competitor->unclear": 1,
+      "content_gap->content_gap": 6,
+      "goal_met->goal_met": 6,
+      "price->competitor": 1,
+      "price->price": 5,
+      "support->support": 6,
+      "technical->technical": 6,
+      "time->competitor": 1,
+      "time->time": 5,
+      "unclear->unclear": 6
+    }
+  },
+  "metrics_all": {
+    "n": 96,
+    "accuracy": 0.948,
+    "macro_f1": 0.949,
+    "accuracy_easy": 0.984,
+    "accuracy_hard": 0.875,
+    "accuracy_en": 0.936,
+    "accuracy_ru": 1.0,
+    "regret_usd_total": 148.2,
+    "regret_usd_per_case": 1.54,
+    "value_captured_pct": 90.2,
+    "per_class": {
+      "price": {
+        "precision": 1.0,
+        "recall": 0.833,
+        "f1": 0.909,
+        "support": 12
+      },
+      "content_gap": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 12
+      },
+      "time": {
+        "precision": 1.0,
+        "recall": 0.917,
+        "f1": 0.957,
+        "support": 12
+      },
+      "goal_met": {
+        "precision": 1.0,
+        "recall": 0.917,
+        "f1": 0.957,
+        "support": 12
+      },
+      "technical": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 12
+      },
+      "support": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 12
+      },
+      "competitor": {
+        "precision": 0.846,
+        "recall": 0.917,
+        "f1": 0.88,
+        "support": 12
+      },
+      "unclear": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.889,
+        "support": 12
+      }
+    },
+    "confusion": {
+      "competitor->competitor": 11,
+      "competitor->unclear": 1,
+      "content_gap->content_gap": 12,
+      "goal_met->goal_met": 11,
+      "goal_met->unclear": 1,
+      "price->competitor": 1,
+      "price->price": 10,
+      "price->unclear": 1,
+      "support->support": 12,
+      "technical->technical": 12,
+      "time->competitor": 1,
+      "time->time": 11,
+      "unclear->unclear": 12
+    }
+  },
+  "costliest_confusions": [
+    {
+      "confusion": "price -> unclear",
+      "count": 1,
+      "regret_usd": 17.6
+    },
+    {
+      "confusion": "goal_met -> unclear",
+      "count": 1,
+      "regret_usd": 7.0
+    }
+  ],
+  "economics": {
+    "ltv": 480.0,
+    "save_rate": {
+      "price": 0.12,
+      "content_gap": 0.04,
+      "time": 0.18,
+      "goal_met": 0.0,
+      "technical": 0.08,
+      "support": 0.1,
+      "competitor": 0.02,
+      "unclear": 0.03
+    },
+    "action_cost": {
+      "price": 48.0,
+      "content_gap": 12.0,
+      "time": 2.0,
+      "goal_met": 1.0,
+      "technical": 40.0,
+      "support": 25.0,
+      "competitor": 12.0,
+      "unclear": 8.0
+    }
+  },
+  "notes": {},
+  "predictions": [
+    {
+      "id": "p01",
+      "split": "test",
+      "label": "price",
+      "pred": "price",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "p02",
+      "split": "test",
+      "label": "price",
+      "pred": "price",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "p03",
+      "split": "dev",
+      "label": "price",
+      "pred": "price",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "p04",
+      "split": "dev",
+      "label": "price",
+      "pred": "competitor",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "p05",
+      "split": "test",
+      "label": "price",
+      "pred": "price",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "p06",
+      "split": "dev",
+      "label": "price",
+      "pred": "price",
+      "difficulty": "easy",
+      "lang": "ru"
+    },
+    {
+      "id": "p07",
+      "split": "dev",
+      "label": "price",
+      "pred": "price",
+      "difficulty": "hard",
+      "lang": "ru"
+    },
+    {
+      "id": "p08",
+      "split": "test",
+      "label": "price",
+      "pred": "unclear",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "p09",
+      "split": "dev",
+      "label": "price",
+      "pred": "price",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "p10",
+      "split": "test",
+      "label": "price",
+      "pred": "price",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "p11",
+      "split": "dev",
+      "label": "price",
+      "pred": "price",
+      "difficulty": "easy",
+      "lang": "ru"
+    },
+    {
+      "id": "p12",
+      "split": "test",
+      "label": "price",
+      "pred": "price",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "c01",
+      "split": "test",
+      "label": "content_gap",
+      "pred": "content_gap",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "c02",
+      "split": "dev",
+      "label": "content_gap",
+      "pred": "content_gap",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "c03",
+      "split": "dev",
+      "label": "content_gap",
+      "pred": "content_gap",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "c04",
+      "split": "test",
+      "label": "content_gap",
+      "pred": "content_gap",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "c05",
+      "split": "test",
+      "label": "content_gap",
+      "pred": "content_gap",
+      "difficulty": "easy",
+      "lang": "ru"
+    },
+    {
+      "id": "c06",
+      "split": "test",
+      "label": "content_gap",
+      "pred": "content_gap",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "c07",
+      "split": "dev",
+      "label": "content_gap",
+      "pred": "content_gap",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "c08",
+      "split": "test",
+      "label": "content_gap",
+      "pred": "content_gap",
+      "difficulty": "hard",
+      "lang": "ru"
+    },
+    {
+      "id": "c09",
+      "split": "dev",
+      "label": "content_gap",
+      "pred": "content_gap",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "c10",
+      "split": "dev",
+      "label": "content_gap",
+      "pred": "content_gap",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "c11",
+      "split": "dev",
+      "label": "content_gap",
+      "pred": "content_gap",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "c12",
+      "split": "test",
+      "label": "content_gap",
+      "pred": "content_gap",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "t01",
+      "split": "test",
+      "label": "time",
+      "pred": "time",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "t02",
+      "split": "test",
+      "label": "time",
+      "pred": "time",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "t03",
+      "split": "dev",
+      "label": "time",
+      "pred": "time",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "t04",
+      "split": "dev",
+      "label": "time",
+      "pred": "time",
+      "difficulty": "easy",
+      "lang": "ru"
+    },
+    {
+      "id": "t05",
+      "split": "dev",
+      "label": "time",
+      "pred": "time",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "t06",
+      "split": "test",
+      "label": "time",
+      "pred": "time",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "t07",
+      "split": "test",
+      "label": "time",
+      "pred": "time",
+      "difficulty": "hard",
+      "lang": "ru"
+    },
+    {
+      "id": "t08",
+      "split": "dev",
+      "label": "time",
+      "pred": "competitor",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "t09",
+      "split": "dev",
+      "label": "time",
+      "pred": "time",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "t10",
+      "split": "test",
+      "label": "time",
+      "pred": "time",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "t11",
+      "split": "test",
+      "label": "time",
+      "pred": "time",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "t12",
+      "split": "dev",
+      "label": "time",
+      "pred": "time",
+      "difficulty": "easy",
+      "lang": "ru"
+    },
+    {
+      "id": "g01",
+      "split": "test",
+      "label": "goal_met",
+      "pred": "goal_met",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "g02",
+      "split": "test",
+      "label": "goal_met",
+      "pred": "goal_met",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "g03",
+      "split": "dev",
+      "label": "goal_met",
+      "pred": "goal_met",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "g04",
+      "split": "test",
+      "label": "goal_met",
+      "pred": "goal_met",
+      "difficulty": "easy",
+      "lang": "ru"
+    },
+    {
+      "id": "g05",
+      "split": "test",
+      "label": "goal_met",
+      "pred": "goal_met",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "g06",
+      "split": "dev",
+      "label": "goal_met",
+      "pred": "goal_met",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "g07",
+      "split": "dev",
+      "label": "goal_met",
+      "pred": "goal_met",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "g08",
+      "split": "dev",
+      "label": "goal_met",
+      "pred": "goal_met",
+      "difficulty": "hard",
+      "lang": "ru"
+    },
+    {
+      "id": "g09",
+      "split": "dev",
+      "label": "goal_met",
+      "pred": "goal_met",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "g10",
+      "split": "test",
+      "label": "goal_met",
+      "pred": "unclear",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "g11",
+      "split": "test",
+      "label": "goal_met",
+      "pred": "goal_met",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "g12",
+      "split": "dev",
+      "label": "goal_met",
+      "pred": "goal_met",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "e01",
+      "split": "dev",
+      "label": "technical",
+      "pred": "technical",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "e02",
+      "split": "dev",
+      "label": "technical",
+      "pred": "technical",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "e03",
+      "split": "test",
+      "label": "technical",
+      "pred": "technical",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "e04",
+      "split": "test",
+      "label": "technical",
+      "pred": "technical",
+      "difficulty": "easy",
+      "lang": "ru"
+    },
+    {
+      "id": "e05",
+      "split": "test",
+      "label": "technical",
+      "pred": "technical",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "e06",
+      "split": "test",
+      "label": "technical",
+      "pred": "technical",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "e07",
+      "split": "test",
+      "label": "technical",
+      "pred": "technical",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "e08",
+      "split": "dev",
+      "label": "technical",
+      "pred": "technical",
+      "difficulty": "hard",
+      "lang": "ru"
+    },
+    {
+      "id": "e09",
+      "split": "dev",
+      "label": "technical",
+      "pred": "technical",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "e10",
+      "split": "dev",
+      "label": "technical",
+      "pred": "technical",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "e11",
+      "split": "test",
+      "label": "technical",
+      "pred": "technical",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "e12",
+      "split": "dev",
+      "label": "technical",
+      "pred": "technical",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "s01",
+      "split": "dev",
+      "label": "support",
+      "pred": "support",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "s02",
+      "split": "test",
+      "label": "support",
+      "pred": "support",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "s03",
+      "split": "dev",
+      "label": "support",
+      "pred": "support",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "s04",
+      "split": "test",
+      "label": "support",
+      "pred": "support",
+      "difficulty": "easy",
+      "lang": "ru"
+    },
+    {
+      "id": "s05",
+      "split": "test",
+      "label": "support",
+      "pred": "support",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "s06",
+      "split": "dev",
+      "label": "support",
+      "pred": "support",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "s07",
+      "split": "dev",
+      "label": "support",
+      "pred": "support",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "s08",
+      "split": "test",
+      "label": "support",
+      "pred": "support",
+      "difficulty": "hard",
+      "lang": "ru"
+    },
+    {
+      "id": "s09",
+      "split": "dev",
+      "label": "support",
+      "pred": "support",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "s10",
+      "split": "test",
+      "label": "support",
+      "pred": "support",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "s11",
+      "split": "test",
+      "label": "support",
+      "pred": "support",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "s12",
+      "split": "dev",
+      "label": "support",
+      "pred": "support",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "k01",
+      "split": "test",
+      "label": "competitor",
+      "pred": "competitor",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "k02",
+      "split": "dev",
+      "label": "competitor",
+      "pred": "competitor",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "k03",
+      "split": "test",
+      "label": "competitor",
+      "pred": "competitor",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "k04",
+      "split": "test",
+      "label": "competitor",
+      "pred": "competitor",
+      "difficulty": "easy",
+      "lang": "ru"
+    },
+    {
+      "id": "k05",
+      "split": "dev",
+      "label": "competitor",
+      "pred": "competitor",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "k06",
+      "split": "dev",
+      "label": "competitor",
+      "pred": "competitor",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "k07",
+      "split": "dev",
+      "label": "competitor",
+      "pred": "unclear",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "k08",
+      "split": "dev",
+      "label": "competitor",
+      "pred": "competitor",
+      "difficulty": "hard",
+      "lang": "ru"
+    },
+    {
+      "id": "k09",
+      "split": "test",
+      "label": "competitor",
+      "pred": "competitor",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "k10",
+      "split": "test",
+      "label": "competitor",
+      "pred": "competitor",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "k11",
+      "split": "dev",
+      "label": "competitor",
+      "pred": "competitor",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "k12",
+      "split": "test",
+      "label": "competitor",
+      "pred": "competitor",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "u01",
+      "split": "test",
+      "label": "unclear",
+      "pred": "unclear",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "u02",
+      "split": "dev",
+      "label": "unclear",
+      "pred": "unclear",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "u03",
+      "split": "test",
+      "label": "unclear",
+      "pred": "unclear",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "u04",
+      "split": "dev",
+      "label": "unclear",
+      "pred": "unclear",
+      "difficulty": "easy",
+      "lang": "ru"
+    },
+    {
+      "id": "u05",
+      "split": "test",
+      "label": "unclear",
+      "pred": "unclear",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "u06",
+      "split": "dev",
+      "label": "unclear",
+      "pred": "unclear",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "u07",
+      "split": "test",
+      "label": "unclear",
+      "pred": "unclear",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "u08",
+      "split": "test",
+      "label": "unclear",
+      "pred": "unclear",
+      "difficulty": "hard",
+      "lang": "ru"
+    },
+    {
+      "id": "u09",
+      "split": "test",
+      "label": "unclear",
+      "pred": "unclear",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "u10",
+      "split": "dev",
+      "label": "unclear",
+      "pred": "unclear",
+      "difficulty": "hard",
+      "lang": "en"
+    },
+    {
+      "id": "u11",
+      "split": "dev",
+      "label": "unclear",
+      "pred": "unclear",
+      "difficulty": "easy",
+      "lang": "en"
+    },
+    {
+      "id": "u12",
+      "split": "dev",
+      "label": "unclear",
+      "pred": "unclear",
+      "difficulty": "hard",
+      "lang": "en"
+    }
+  ]
+}

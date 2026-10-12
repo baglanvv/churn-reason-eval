@@ -1,0 +1,8 @@
+Classify this subscription cancellation comment into exactly one churn reason.
+
+Allowed labels: price, content_gap, time, goal_met, technical, support, competitor, unclear
+
+Comment:
+{{TEXT}}
+
+Reply with the label only, no explanation.

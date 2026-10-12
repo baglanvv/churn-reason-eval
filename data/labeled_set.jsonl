@@ -1,0 +1,96 @@
+{"id": "p01", "lang": "en", "label": "price", "difficulty": "easy", "split": "test", "text": "Too expensive for me right now, sorry."}
+{"id": "p02", "lang": "en", "label": "price", "difficulty": "easy", "split": "test", "text": "I lost my job last month and I have to cut every subscription I have. The course was good."}
+{"id": "p03", "lang": "en", "label": "price", "difficulty": "easy", "split": "dev", "text": "40 dollars a month is a lot for what you get. Not worth it."}
+{"id": "p04", "lang": "en", "label": "price", "difficulty": "hard", "split": "dev", "text": "Found the same SQL material on another platform for a third of the price. Same quality honestly.", "note": "Mentions a competitor but the decisive factor is price -> price, not competitor"}
+{"id": "p05", "lang": "en", "label": "price", "difficulty": "easy", "split": "test", "text": "Please cancel. Cannot justify the cost to my wife every month."}
+{"id": "p06", "lang": "ru", "label": "price", "difficulty": "easy", "split": "dev", "text": "Дорого. Для студента это очень большие деньги, к сожалению."}
+{"id": "p07", "lang": "ru", "label": "price", "difficulty": "hard", "split": "dev", "text": "Курс хороший, но после повышения цены стало тяжело. Если будет скидка - вернусь.", "note": "Explicit save signal plus price -> price"}
+{"id": "p08", "lang": "en", "label": "price", "difficulty": "hard", "split": "test", "text": "Honestly the annual plan is fine but I only needed two courses and paying for the whole library makes no sense.", "note": "Packaging/value complaint, resolves to price"}
+{"id": "p09", "lang": "en", "label": "price", "difficulty": "easy", "split": "dev", "text": "budget cuts at work, they stopped reimbursing learning expenses"}
+{"id": "p10", "lang": "en", "label": "price", "difficulty": "easy", "split": "test", "text": "I want to cancel before the next charge. Too pricey."}
+{"id": "p11", "lang": "ru", "label": "price", "difficulty": "easy", "split": "dev", "text": "Не по карману сейчас, отменяю подписку"}
+{"id": "p12", "lang": "en", "label": "price", "difficulty": "hard", "split": "test", "text": "Great platform. Wrong price point for the Kazakhstan market in my opinion.", "note": "Positive sentiment + price -> price. Sentiment is not the label."}
+{"id": "c01", "lang": "en", "label": "content_gap", "difficulty": "easy", "split": "test", "text": "I was looking for advanced React patterns and everything here is beginner level."}
+{"id": "c02", "lang": "en", "label": "content_gap", "difficulty": "easy", "split": "dev", "text": "No courses on data engineering at all. That is what I signed up for."}
+{"id": "c03", "lang": "en", "label": "content_gap", "difficulty": "easy", "split": "dev", "text": "The instructor reads slides out loud. I learned nothing in 4 weeks."}
+{"id": "c04", "lang": "en", "label": "content_gap", "difficulty": "hard", "split": "test", "text": "Content stops exactly where it gets interesting. Every track is an intro with no follow up.", "note": "Depth complaint, no explicit topic named"}
+{"id": "c05", "lang": "ru", "label": "content_gap", "difficulty": "easy", "split": "test", "text": "Нет материалов по продуктовой аналитике, а я именно за этим пришёл."}
+{"id": "c06", "lang": "en", "label": "content_gap", "difficulty": "easy", "split": "test", "text": "Courses are from 2021 and the frameworks changed. Outdated."}
+{"id": "c07", "lang": "en", "label": "content_gap", "difficulty": "hard", "split": "dev", "text": "Too much theory, zero practice projects. I cannot put anything from this on a portfolio.", "note": "Format/pedagogy complaint -> content_gap"}
+{"id": "c08", "lang": "ru", "label": "content_gap", "difficulty": "hard", "split": "test", "text": "Ожидал практику с реальными кейсами, а это пересказ учебника.", "note": "Expectation mismatch on content quality"}
+{"id": "c09", "lang": "en", "label": "content_gap", "difficulty": "easy", "split": "dev", "text": "Needed Python for finance specifically, library only has generic Python."}
+{"id": "c10", "lang": "en", "label": "content_gap", "difficulty": "easy", "split": "dev", "text": "The machine learning track has no math prerequisites explained, I got lost by lesson 3 and there was no foundation course."}
+{"id": "c11", "lang": "en", "label": "content_gap", "difficulty": "hard", "split": "dev", "text": "I finished the only track that was relevant to me in three weeks and now there is nothing left to watch.", "note": "Sounds like goal_met but the driver is a thin library -> content_gap"}
+{"id": "c12", "lang": "en", "label": "content_gap", "difficulty": "easy", "split": "test", "text": "Quality of the English subtitles is terrible, cannot follow the lectures."}
+{"id": "t01", "lang": "en", "label": "time", "difficulty": "easy", "split": "test", "text": "No time at all with the new job. Hope to come back later."}
+{"id": "t02", "lang": "en", "label": "time", "difficulty": "easy", "split": "test", "text": "Baby arrived, studying is not happening this year."}
+{"id": "t03", "lang": "en", "label": "time", "difficulty": "easy", "split": "dev", "text": "I have not opened the app in two months. Not fair to keep paying."}
+{"id": "t04", "lang": "ru", "label": "time", "difficulty": "easy", "split": "dev", "text": "Совсем нет времени, работа забирает все вечера. Курс отличный."}
+{"id": "t05", "lang": "en", "label": "time", "difficulty": "hard", "split": "dev", "text": "Finals are in three weeks and after that I have an internship. Can I come back in autumn?", "note": "Explicit pause request -> time"}
+{"id": "t06", "lang": "en", "label": "time", "difficulty": "easy", "split": "test", "text": "too busy right now"}
+{"id": "t07", "lang": "ru", "label": "time", "difficulty": "hard", "split": "test", "text": "Можно ли заморозить подписку на пару месяцев? Сейчас не успеваю.", "note": "Direct pause ask - the cheapest save in the taxonomy"}
+{"id": "t08", "lang": "en", "label": "time", "difficulty": "easy", "split": "dev", "text": "Moving to another country, everything is chaos, no capacity to study."}
+{"id": "t09", "lang": "en", "label": "time", "difficulty": "hard", "split": "dev", "text": "I keep paying and keep not watching. That is on me, not you.", "note": "Self-blame, low usage -> time"}
+{"id": "t10", "lang": "en", "label": "time", "difficulty": "easy", "split": "test", "text": "Health issues in the family, I need to step away for a while."}
+{"id": "t11", "lang": "en", "label": "time", "difficulty": "easy", "split": "test", "text": "Taking a break, will resubscribe when my schedule calms down."}
+{"id": "t12", "lang": "ru", "label": "time", "difficulty": "easy", "split": "dev", "text": "Пока отменяю, вернусь когда разгрузится график"}
+{"id": "g01", "lang": "en", "label": "goal_met", "difficulty": "easy", "split": "test", "text": "Passed the AWS certification last week. Thank you, this is exactly what I needed!"}
+{"id": "g02", "lang": "en", "label": "goal_met", "difficulty": "easy", "split": "test", "text": "Got the job offer. Starting as a junior analyst in November. Cancelling because I am done."}
+{"id": "g03", "lang": "en", "label": "goal_met", "difficulty": "easy", "split": "dev", "text": "Finished the full data analytics track. Nothing left for me to do here."}
+{"id": "g04", "lang": "ru", "label": "goal_met", "difficulty": "easy", "split": "test", "text": "Сдал экзамен, спасибо большое! Подписка больше не нужна."}
+{"id": "g05", "lang": "en", "label": "goal_met", "difficulty": "hard", "split": "test", "text": "Mission accomplished. Was here for the interview prep and the interviews are over.", "note": "No explicit success word, but goal completion is clear"}
+{"id": "g06", "lang": "en", "label": "goal_met", "difficulty": "easy", "split": "dev", "text": "Completed all 6 courses in my learning path. Great experience overall."}
+{"id": "g07", "lang": "en", "label": "goal_met", "difficulty": "hard", "split": "dev", "text": "I only subscribed for the thesis statistics module. Thesis is submitted.", "note": "Single-purpose subscriber who finished -> goal_met, NOT content_gap"}
+{"id": "g08", "lang": "ru", "label": "goal_met", "difficulty": "hard", "split": "dev", "text": "Цель достигнута - повысили на работе. Дальше пока не планирую учиться.", "note": "Career outcome achieved"}
+{"id": "g09", "lang": "en", "label": "goal_met", "difficulty": "easy", "split": "dev", "text": "Learned what I came for. 10/10, would recommend to friends."}
+{"id": "g10", "lang": "en", "label": "goal_met", "difficulty": "hard", "split": "test", "text": "Honestly I would keep paying but there is genuinely nothing more I need from the platform at this point.", "note": "Willing to pay but no need - discounting this person is pure margin loss"}
+{"id": "g11", "lang": "en", "label": "goal_met", "difficulty": "easy", "split": "test", "text": "Switched careers successfully thanks to the UX track. Cancelling now."}
+{"id": "g12", "lang": "en", "label": "goal_met", "difficulty": "easy", "split": "dev", "text": "Graduated! No longer need the student subscription."}
+{"id": "e01", "lang": "en", "label": "technical", "difficulty": "easy", "split": "dev", "text": "Videos buffer every 30 seconds. Unwatchable."}
+{"id": "e02", "lang": "en", "label": "technical", "difficulty": "easy", "split": "dev", "text": "The iOS app crashes on launch since the last update. Cannot study on my commute anymore."}
+{"id": "e03", "lang": "en", "label": "technical", "difficulty": "easy", "split": "test", "text": "My progress got reset twice. Lost 20 completed lessons."}
+{"id": "e04", "lang": "ru", "label": "technical", "difficulty": "easy", "split": "test", "text": "Видео не загружается уже вторую неделю, платить за это не буду."}
+{"id": "e05", "lang": "en", "label": "technical", "difficulty": "hard", "split": "test", "text": "The code sandbox times out on every exercise so I cannot submit anything. Tried three browsers.", "note": "Specific feature failure, user already debugged"}
+{"id": "e06", "lang": "en", "label": "technical", "difficulty": "easy", "split": "test", "text": "Cannot log in with Google since Tuesday. Password reset email never arrives."}
+{"id": "e07", "lang": "en", "label": "technical", "difficulty": "hard", "split": "test", "text": "Downloaded lessons disappear from the app when I go offline, which defeats the entire point of the download feature for me.", "note": "Feature does not work as designed -> technical"}
+{"id": "e08", "lang": "ru", "label": "technical", "difficulty": "hard", "split": "dev", "text": "Приложение на андроиде вылетает при открытии теста. Писал в чат - не помогло.", "note": "Both technical and support mentioned; root cause is the defect -> technical"}
+{"id": "e09", "lang": "en", "label": "technical", "difficulty": "easy", "split": "dev", "text": "Certificate download is broken, gives a 500 error."}
+{"id": "e10", "lang": "en", "label": "technical", "difficulty": "easy", "split": "dev", "text": "Quiz answers are marked wrong when they are correct. Clearly a bug."}
+{"id": "e11", "lang": "en", "label": "technical", "difficulty": "easy", "split": "test", "text": "Playback speed control stopped working and the site is extremely slow on my laptop."}
+{"id": "e12", "lang": "en", "label": "technical", "difficulty": "hard", "split": "dev", "text": "Payment went through twice according to my bank but the app says my subscription is inactive.", "note": "Billing system defect -> technical, though it borders on support"}
+{"id": "s01", "lang": "en", "label": "support", "difficulty": "easy", "split": "dev", "text": "I opened a ticket 11 days ago and nobody has replied. Done with this."}
+{"id": "s02", "lang": "en", "label": "support", "difficulty": "easy", "split": "test", "text": "You charged me after I cancelled. Asked for a refund twice, got a bot reply both times."}
+{"id": "s03", "lang": "en", "label": "support", "difficulty": "easy", "split": "dev", "text": "The support agent was rude and closed my chat."}
+{"id": "s04", "lang": "ru", "label": "support", "difficulty": "easy", "split": "test", "text": "Поддержка не отвечает уже неделю. Отношение к клиентам ужасное."}
+{"id": "s05", "lang": "en", "label": "support", "difficulty": "hard", "split": "test", "text": "Nobody could tell me whether my certificate is accredited. Three agents, three different answers.", "note": "Support competence failure, not a product defect"}
+{"id": "s06", "lang": "en", "label": "support", "difficulty": "easy", "split": "dev", "text": "Surprise renewal charge with no warning email. That is not how you treat customers."}
+{"id": "s07", "lang": "en", "label": "support", "difficulty": "hard", "split": "dev", "text": "I asked to switch from annual to monthly and was told to cancel and resubscribe, losing my progress. Absurd process.", "note": "Billing policy/admin friction -> support"}
+{"id": "s08", "lang": "ru", "label": "support", "difficulty": "hard", "split": "test", "text": "Просил вернуть деньги за неиспользованный месяц - отказали без объяснений.", "note": "Refund friction -> support"}
+{"id": "s09", "lang": "en", "label": "support", "difficulty": "easy", "split": "dev", "text": "Impossible to reach a human. The help center just loops."}
+{"id": "s10", "lang": "en", "label": "support", "difficulty": "easy", "split": "test", "text": "They promised a callback about my invoice for the company and never called."}
+{"id": "s11", "lang": "en", "label": "support", "difficulty": "hard", "split": "test", "text": "Cancelling because of how the last conversation went, not because of the courses. Courses are fine.", "note": "Explicitly separates support from product quality"}
+{"id": "s12", "lang": "en", "label": "support", "difficulty": "easy", "split": "dev", "text": "Took 4 emails to get an invoice with my company name spelled correctly."}
+{"id": "k01", "lang": "en", "label": "competitor", "difficulty": "easy", "split": "test", "text": "Moving to Coursera, my employer gives us free licenses there."}
+{"id": "k02", "lang": "en", "label": "competitor", "difficulty": "easy", "split": "dev", "text": "Switching to a bootcamp with live mentorship. I need accountability, not recorded videos."}
+{"id": "k03", "lang": "en", "label": "competitor", "difficulty": "easy", "split": "test", "text": "My university gave us DataCamp access so I do not need two platforms."}
+{"id": "k04", "lang": "ru", "label": "competitor", "difficulty": "easy", "split": "test", "text": "Перехожу на Stepik, там больше курсов на русском."}
+{"id": "k05", "lang": "en", "label": "competitor", "difficulty": "hard", "split": "dev", "text": "Another provider offers a job guarantee. That is worth more to me than your library size.", "note": "Unnamed competitor + differentiator is a feature, not price"}
+{"id": "k06", "lang": "en", "label": "competitor", "difficulty": "easy", "split": "dev", "text": "Found a platform with proper 1-on-1 code review. Cancelling here."}
+{"id": "k07", "lang": "en", "label": "competitor", "difficulty": "hard", "split": "dev", "text": "Our whole team standardized on a different LMS so I am consolidating.", "note": "Org-level switch -> competitor"}
+{"id": "k08", "lang": "ru", "label": "competitor", "difficulty": "hard", "split": "dev", "text": "Нашёл курс с живыми вебинарами и чатом с преподавателем, мне так подходит больше.", "note": "Format preference drives the switch"}
+{"id": "k09", "lang": "en", "label": "competitor", "difficulty": "easy", "split": "test", "text": "Udemy lets me buy single courses and keep them forever. Subscriptions are not for me."}
+{"id": "k10", "lang": "en", "label": "competitor", "difficulty": "hard", "split": "test", "text": "I got into a university masters program so the online platform is redundant now.", "note": "Alternative education path -> competitor"}
+{"id": "k11", "lang": "en", "label": "competitor", "difficulty": "easy", "split": "dev", "text": "Switching to a competitor with better mobile offline support."}
+{"id": "k12", "lang": "en", "label": "competitor", "difficulty": "easy", "split": "test", "text": "Company signed an enterprise deal with another vendor, we all migrate next month."}
+{"id": "u01", "lang": "en", "label": "unclear", "difficulty": "easy", "split": "test", "text": "cancel"}
+{"id": "u02", "lang": "en", "label": "unclear", "difficulty": "easy", "split": "dev", "text": "-"}
+{"id": "u03", "lang": "en", "label": "unclear", "difficulty": "easy", "split": "test", "text": "no comment"}
+{"id": "u04", "lang": "ru", "label": "unclear", "difficulty": "easy", "split": "dev", "text": "не хочу больше"}
+{"id": "u05", "lang": "en", "label": "unclear", "difficulty": "hard", "split": "test", "text": "It was not for me.", "note": "Polite non-answer. Tempting to guess content_gap - correct behaviour is to abstain."}
+{"id": "u06", "lang": "en", "label": "unclear", "difficulty": "easy", "split": "dev", "text": "asdfgh"}
+{"id": "u07", "lang": "en", "label": "unclear", "difficulty": "hard", "split": "test", "text": "Just cancelling, nothing personal. Maybe later.", "note": "Zero diagnostic content despite being friendly"}
+{"id": "u08", "lang": "ru", "label": "unclear", "difficulty": "hard", "split": "test", "text": "Пока всё, спасибо.", "note": "Could read as goal_met - but there is no stated goal. Abstain."}
+{"id": "u09", "lang": "en", "label": "unclear", "difficulty": "easy", "split": "test", "text": "ok"}
+{"id": "u10", "lang": "en", "label": "unclear", "difficulty": "hard", "split": "dev", "text": "Circumstances changed.", "note": "Could be time, could be price. Not enough to act on."}
+{"id": "u11", "lang": "en", "label": "unclear", "difficulty": "easy", "split": "dev", "text": "please process my cancellation request as per your terms"}
+{"id": "u12", "lang": "en", "label": "unclear", "difficulty": "hard", "split": "dev", "text": "I think you know why.", "note": "Adversarial non-answer"}
